@@ -6,12 +6,19 @@ services:
       - 53:53
     volumes:
       - dns_conf:/etc/bind
+    networks:
+      - rdns01
   asir_cliente:
     image: cliente_ubuntu:net-tools
+    networks:
+      - rdns01
     dns:
-    - 172.18.0.3
+      - 172.19.0.3
     stdin_open: true  # docker run -i
     tty: true         # docker run -t
+networks:
+ rdns01:
+  external: true
 volumes:
   dns_conf:
     external: true

@@ -5,11 +5,13 @@ services:
     ports:
       - 53:53
     volumes:
-      - conf:/etc/bind
+      - dns_conf:/etc/bind
   asir_cliente:
-    image: ubuntu
+    image: cliente_ubuntu:net-tools
+    dns:
+    - 172.18.0.3
     stdin_open: true  # docker run -i
     tty: true         # docker run -t
 volumes:
-  conf:
+  dns_conf:
     external: true

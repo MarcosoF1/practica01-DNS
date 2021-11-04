@@ -33,7 +33,17 @@ networks:
   external: true
 - Aqui el external: true no lo quitaremos en ningun caso ya que la red la crearemos por comandos antes.
 
-#### Creacion de servicios:
+#### Creacion de servicios
 
 - Al crear el contenedor de bind el servicio dns se crea con el ya que el contenedor es el servicio mismo
+
+#### Modificaciones a la configuracion de bind
+
+- Lo primero cambiado fue los forwarders, puse el primero de google y el segundo el dns secundario de google 
+	 forwarders {
+	 	8.8.8.8;
+		 8.8.4.4;
+	 };
+
+- Nota: despues de tocar cualquier configuración hay que reiniciar el servicio/contenedor
 

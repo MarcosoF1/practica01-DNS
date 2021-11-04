@@ -15,7 +15,7 @@ volumes:
 
 #### Para tener una red propia interna para todos los contenedores
 
-- Creamos la red con: docker network create  --ubnet 10.1.0.0/24 --gateway 10.1.0.1 br02
+- Creamos la red con: docker network create  --subnet 10.1.0.0/24 --gateway 10.1.0.1 br02
 
 - Dentro del docker compose tenemos que poner para meter los contenedores en la red:
 
@@ -33,5 +33,7 @@ networks:
   external: true
 - Aqui el external: true no lo quitaremos en ningun caso ya que la red la crearemos por comandos antes.
 
+#### Creacion de servicios:
 
+- Al crear el contenedor de bind el servicio dns se crea con el ya que el contenedor es el servicio mismo
 

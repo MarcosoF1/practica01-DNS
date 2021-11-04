@@ -45,5 +45,15 @@ networks:
 		 8.8.4.4;
 	 };
 
+- para crear el servicio: docker-compose up
+- Para iniciar el servicio: docker-compose start
+- Para parar el servicio: docker-compose stop
+- Para eliminar el servicio: docker-compose down
+
+- Si solo quieres que afecte al servidor y no a los creados con el compose todos utiliza docker "Opcion" "Nombre del contenedor"
+
 - Nota: despues de tocar cualquier configuración hay que reiniciar el servicio/contenedor
+
+
+
 
